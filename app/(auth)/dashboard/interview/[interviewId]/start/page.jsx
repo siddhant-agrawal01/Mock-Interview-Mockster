@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { MockInterview } from "../../@/utils/schema";
+import { MockInterview } from "../@/utils/schema";
 import { eq } from "drizzle-orm";
-import { db } from "../../@/utils/db";
+import { db } from "../@/utils/db";
 import QuestionSection from "./_components/QuestionSection";
 import RecordAnswerSection from "./_components/RecordAnswerSection";
 import { Button } from "../../@/components/ui/button";

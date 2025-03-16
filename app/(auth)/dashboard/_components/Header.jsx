@@ -71,21 +71,20 @@ const Header = () => {
             className="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none"
             onClick={toggleMenu}
           >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={
-                  menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
-                }
-              />
-            </svg>
+            {menuOpen ? (
+              // Close icon (X)
+              <div className="h-6 w-6 relative">
+                <div className="absolute w-6 h-0.5 bg-current transform rotate-45 top-3"></div>
+                <div className="absolute w-6 h-0.5 bg-current transform -rotate-45 top-3"></div>
+              </div>
+            ) : (
+              // Hamburger icon (≡)
+              <div className="h-6 w-6 flex flex-col justify-between items-center py-1">
+                <div className="w-6 h-0.5 bg-current"></div>
+                <div className="w-6 h-0.5 bg-current"></div>
+                <div className="w-6 h-0.5 bg-current"></div>
+              </div>
+            )}
           </button>
         </nav>
 

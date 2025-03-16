@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "../../../@/components/ui/button";
 import useSpeechToText from "react-hook-speech-to-text";
 import { toast } from "sonner";
-import { chatSession } from "../../../@/utils/Gemini";
+import { chatSession } from "../../@/utils/Gemini";
 import { useUser } from "@clerk/nextjs";
 
 const RecordAnswerSection = ({
